@@ -1,0 +1,47 @@
+Update-ExecutionPolicy Unrestricted
+
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
+
+
+#set up the network share access
+
+$cred = Get-Credential -Message "Your Corpdom credentials";
+New-PSDrive -name boxstarter -Psprovider FileSystem -root \\lnz-alexf\boxstarter -credential $cred
+Set-BoxstarterConfig -LocalRepo \\lnz-alexf\boxstarter\BuildPackages
+
+New-PSDrive -name isos -Psprovider FileSystem -root \\lnz-data\isos -credential $cred
+New-PSDrive -name install -Psprovider FileSystem -root \\lnz-data\install -credential $cred
+
+
+# Visual Studio and Windows SDKs
+
+cinst iso-mounter
+
+cinst windows-8-sdk
+cinst windows-7-sdk
+cinst DotNet3.5
+cinst visual-studio-2008
+cinst visual-studio-2010
+cinst VisualStudio2012Professional
+cinst VisualStudio2013Professional
+cinst VS2010SDK
+
+cinst visual-studio-2008-patches
+cinst visual-studio-2008-sp1
+cinst visual-studio-2010-patches
+cinst visual-studio-2010-sp1
+cinst visual-studio-2010-sdk-sp1
+
+cinst visual-assist
+cinst actipro-syntax-editor
+
+
+# Java 
+
+cinst javaruntime-preventasktoolbar
+cinst jdk-1.5
+cinst jdk-1.6
+cinst jdk8
+
+cinst eclipse-standard-kepler
