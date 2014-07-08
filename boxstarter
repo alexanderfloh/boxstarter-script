@@ -7,12 +7,12 @@ Enable-RemoteDesktop
 
 #set up the network share access
 
-$cred = Get-Credential -Message "Your Corpdom credentials";
-New-PSDrive -name boxstarter -Psprovider FileSystem -root \\lnz-alexf\boxstarter -credential $cred
-Set-BoxstarterConfig -LocalRepo \\lnz-alexf\boxstarter\BuildPackages
+#$cred = Get-Credential -Message "Your Corpdom credentials";
+#New-PSDrive -name boxstarter -Psprovider FileSystem -root \\lnz-alexf\boxstarter -credential $cred
+#Set-BoxstarterConfig -LocalRepo \\lnz-alexf\boxstarter\BuildPackages
 
-New-PSDrive -name isos -Psprovider FileSystem -root \\lnz-data\isos -credential $cred
-New-PSDrive -name install -Psprovider FileSystem -root \\lnz-data\install -credential $cred
+#New-PSDrive -name isos -Psprovider FileSystem -root \\lnz-data\isos -credential $cred
+#New-PSDrive -name install -Psprovider FileSystem -root \\lnz-data\install -credential $cred
 
 
 # Visual Studio and Windows SDKs
