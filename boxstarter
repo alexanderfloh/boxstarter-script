@@ -45,4 +45,4 @@ cinst jdk-1.5
 cinst jdk-1.6
 cinst jdk8
 
-cinst eclipse-standard-kepler
+cinst eclipse-java-luna
