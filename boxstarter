@@ -24,7 +24,7 @@ Enable-RemoteDesktop
 
 cinst iso-mounter
 
-cinst DotNet3.5
+cinst DotNet3.5-from-iso
 
 cinst visual-studio-2008
 cinst visual-studio-2008-patches
