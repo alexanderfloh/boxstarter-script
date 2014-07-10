@@ -1,7 +1,8 @@
 Install-WindowsUpdate
 Update-ExecutionPolicy Unrestricted
 
-Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions 
+
 Enable-RemoteDesktop
 
 
@@ -19,11 +20,17 @@ Enable-RemoteDesktop
 
 cinst iso-mounter
 
-cinst windows-8-sdk
-cinst windows-7-sdk
 cinst DotNet3.5
+
 cinst visual-studio-2008
+cinst visual-studio-2008-patches
+cinst visual-studio-2008-sp1
+
 cinst visual-studio-2010
+cinst VS2010SDK
+cinst visual-studio-2010-patches
+cinst visual-studio-2010-sp1
+cinst visual-studio-2010-sdk-sp1
 
 cinst VisualStudio2012Professional
 cinst VS2012.4
@@ -31,17 +38,11 @@ cinst VS2012.4
 cinst VisualStudio2013Professional
 cinst VS2013.2
 
-cinst VS2010SDK
-
-cinst visual-studio-2008-patches
-cinst visual-studio-2008-sp1
-cinst visual-studio-2010-patches
-cinst visual-studio-2010-sp1
-cinst visual-studio-2010-sdk-sp1
+cinst windows-7-sdk
+cinst windows-8-sdk
 
 cinst visual-assist
 cinst actipro-syntax-editor
-
 
 # Java 
 
