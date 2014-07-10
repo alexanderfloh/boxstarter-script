@@ -47,7 +47,7 @@ cinst windows-7-sdk
 cinst windows-8-sdk
 
 cinst visual-assist
-cinst actipro-syntax-editor
+#cinst actipro-syntax-editor
 
 # Java 
 
