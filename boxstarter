@@ -37,7 +37,8 @@ cinst visual-studio-2010-patches
 cinst visual-studio-2010-sp1
 cinst visual-studio-2010-sdk-sp1
 
-cinst VisualStudio2012Professional
+#cinst VisualStudio2012Professional // doesn't install MFC
+cinst visual-studio-2012
 cinst VS2012.4
 
 cinst VisualStudio2013Professional
