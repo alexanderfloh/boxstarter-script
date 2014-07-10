@@ -1,3 +1,8 @@
+# todos: 
+# .NET 3.5 on win 8 (install from iso)
+# vs2010 sp1 may not work
+# vs 2012 MFC for c++
+
 Install-WindowsUpdate
 Update-ExecutionPolicy Unrestricted
 
