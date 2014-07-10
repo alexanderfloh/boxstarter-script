@@ -57,3 +57,5 @@ cinst jdk-1.6
 cinst jdk8
 
 cinst eclipse-java-luna
+
+cinst tortoisesvn
