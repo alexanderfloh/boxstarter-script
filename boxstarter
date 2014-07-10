@@ -2,6 +2,13 @@
 # .NET 3.5 on win 8 (install from iso)
 # vs2010 sp1 may not work
 
+if ((gwmi win32_computersystem).partofdomain -eq $true) {
+    write-host -fore green "I am domain joined!"
+} else {
+    Write-ChocolateyFailure "machine needs to be domain joined."
+    throw "machine needs to be domain joined."
+}
+
 Install-WindowsUpdate
 Update-ExecutionPolicy Unrestricted
 
