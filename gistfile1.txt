@@ -1,0 +1,3 @@
+Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
+
+cinst iso-mounter

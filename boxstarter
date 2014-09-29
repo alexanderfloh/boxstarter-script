@@ -22,8 +22,6 @@ Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildP
 
 # Visual Studio and Windows SDKs
 
-cinst iso-mounter
-
 cinst DotNet3.5-from-iso
 
 cinst visual-studio-2008
