@@ -15,12 +15,12 @@ Update-ExecutionPolicy Unrestricted
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions 
 Enable-RemoteDesktop
 
-Install-BoxstarterPackage -PackageName 
 
 Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
 
 choco install PsGet
 
+Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/alexanderfloh/6c53c10a495a41c13388/raw/8f76f65e7558d0e77d947af35c579ccb0210865f/boxstarter2
 
 
 # Visual Studio and Windows SDKs
