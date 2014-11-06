@@ -1,5 +1,6 @@
 # todos: 
 # vs2010 sp1 may not work
+# actipro-syntax-editor - headless install doesnt work (license stuff)
 
 if ((gwmi win32_computersystem).partofdomain -eq $true) {
     write-host -fore green "I am domain joined!"
@@ -24,40 +25,40 @@ install-module -ModuleUrl https://gist.githubusercontent.com/alexanderfloh/cdd2f
 
 # Visual Studio and Windows SDKs
 
-cinst DotNet3.5-from-iso
+choco install DotNet3.5-from-iso
 
-cinst visual-studio-2008
-cinst visual-studio-2008-patches
-cinst visual-studio-2008-sp1
+choco install visual-studio-2008
+choco install visual-studio-2008-patches
+choco install visual-studio-2008-sp1
 
-cinst visual-studio-2010
-cinst VS2010SDK
-cinst visual-studio-2010-patches
-cinst visual-studio-2010-sp1
-cinst visual-studio-2010-sdk-sp1
+choco install visual-studio-2010
+choco install VS2010SDK
+choco install visual-studio-2010-patches
+choco install visual-studio-2010-sp1
+choco install visual-studio-2010-sdk-sp1
 
-#cinst VisualStudio2012Professional // doesn't install MFC
-cinst visual-studio-2012
-cinst VS2012.4
+#choco install VisualStudio2012Professional // doesn't install MFC
+choco install visual-studio-2012
+choco install VS2012.4
 
-cinst Silverlight5SDK
+choco install Silverlight5SDK
 
-cinst VisualStudio2013Professional
-cinst VS2013.2
+choco install VisualStudio2013Professional
+choco install VS2013.2
 
-cinst windows-7-sdk
-cinst windows-8-sdk
+choco install windows-7-sdk
+choco install windows-8-sdk
 
-cinst visual-assist
-#cinst actipro-syntax-editor
+choco install visual-assist
+
 
 # Java 
 
-cinst javaruntime-preventasktoolbar
-cinst jdk-1.5
-cinst jdk-1.6
-cinst jdk8
+choco install javaruntime-preventasktoolbar
+choco install jdk-1.5
+choco install jdk-1.6
+choco install jdk8
 
-cinst eclipse-java-luna
+choco install eclipse-java-luna
 
-cinst tortoisesvn
+choco install tortoisesvn
