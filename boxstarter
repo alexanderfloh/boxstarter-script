@@ -30,6 +30,7 @@ if (-not $Destination) {
 $PsGetFullPath = (Join-Path -Path $Destination -ChildPath 'PsGet')
 Write $PsGetFullPath
 Import-Module $PsGetFullPath
+Install-Module -ModuleUrl https://gist.githubusercontent.com/alexanderfloh/cdd2f1cc24f1a4a823aa/raw/de08481eff702a074cc682abf54ca038b14d4e36/mount.iso.psm1
 
 #Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/alexanderfloh/6c53c10a495a41c13388/raw/8f76f65e7558d0e77d947af35c579ccb0210865f/boxstarter2
 
