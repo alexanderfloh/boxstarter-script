@@ -1,5 +1,4 @@
 # todos: 
-# .NET 3.5 on win 8 (install from iso)
 # vs2010 sp1 may not work
 
 if ((gwmi win32_computersystem).partofdomain -eq $true) {
@@ -13,11 +12,14 @@ Install-WindowsUpdate
 Update-ExecutionPolicy Unrestricted
 
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions 
-
 Enable-RemoteDesktop
 
 
 Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
+
+choco install PsGet
+
+install-module -ModuleUrl https://gist.githubusercontent.com/alexanderfloh/cdd2f1cc24f1a4a823aa/raw/de08481eff702a074cc682abf54ca038b14d4e36/mount.iso.psm1
 
 
 # Visual Studio and Windows SDKs
