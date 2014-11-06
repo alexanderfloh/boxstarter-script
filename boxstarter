@@ -15,13 +15,12 @@ Update-ExecutionPolicy Unrestricted
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions 
 Enable-RemoteDesktop
 
+Install-BoxstarterPackage -PackageName 
 
 Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
 
 choco install PsGet
 
-Import-Module PsGet
-Install-Module -ModuleUrl https://gist.githubusercontent.com/alexanderfloh/cdd2f1cc24f1a4a823aa/raw/de08481eff702a074cc682abf54ca038b14d4e36/mount.iso.psm1
 
 
 # Visual Studio and Windows SDKs
