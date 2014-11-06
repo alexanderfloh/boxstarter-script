@@ -19,8 +19,20 @@ Enable-RemoteDesktop
 Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
 
 choco install PsGet
+$ModulePaths = @($env:PSModulePath -split ';')
+$ExpectedUserModulePath = Join-Path -Path ([Environment]::GetFolderPath('MyDocuments')) -ChildPath WindowsPowerShell\Modules
+$Destination = $ModulePaths | Where-Object { 
+    Test-Path -Path (Join-Path -Path $_ -ChildPath 'PsGet')
+}
+if (-not $Destination) {
+    $Destination = $ModulePaths | Select-Object -Index 0
+}
 
-Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/alexanderfloh/6c53c10a495a41c13388/raw/8f76f65e7558d0e77d947af35c579ccb0210865f/boxstarter2
+$PsGetFullPath = (Join-Path -Path $Destination -ChildPath 'PsGet')
+Write $PsGetFullPath
+Import-Module $PsGetFullPath
+
+#Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/alexanderfloh/6c53c10a495a41c13388/raw/8f76f65e7558d0e77d947af35c579ccb0210865f/boxstarter2
 
 
 # Visual Studio and Windows SDKs
