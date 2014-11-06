@@ -9,7 +9,6 @@ if ((gwmi win32_computersystem).partofdomain -eq $true) {
     throw "machine needs to be domain joined."
 }
 
-Install-WindowsUpdate
 Update-ExecutionPolicy Unrestricted
 
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions 
@@ -74,3 +73,5 @@ choco install jdk8
 choco install eclipse-java-luna
 
 choco install tortoisesvn
+
+Install-WindowsUpdate
