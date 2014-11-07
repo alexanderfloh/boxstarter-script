@@ -1,5 +1,5 @@
 # todos:
-# add jdk 7
+# add working eclipse
 # vs2010 sp1 may not work
 # actipro-syntax-editor - headless install doesnt work (license stuff)
 
@@ -73,6 +73,8 @@ choco install visual-assist
 choco install javaruntime-preventasktoolbar
 choco install jdk-1.5
 choco install jdk-1.6
+#jdk 7
+choco install java.jdk -params "x64=false"
 choco install jdk8
 
 #choco install eclipse-java-luna
