@@ -20,7 +20,7 @@ Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildP
 choco install PsGet
 
 $ModulePaths = @($env:PSModulePath -split ';')
-Write $ModulePaths
+Write 'module paths: ' + $ModulePaths
 $ExpectedUserModulePath = Join-Path -Path ([Environment]::GetFolderPath('MyDocuments')) -ChildPath WindowsPowerShell\Modules
 $Destination = $ModulePaths | Where-Object { 
     Test-Path -Path (Join-Path -Path $_ -ChildPath 'PsGet')
