@@ -1,0 +1,79 @@
+# todos:
+# add working eclipse
+# vs2010 sp1 may not work
+# actipro-syntax-editor - headless install doesnt work (license stuff)
+ 
+if ((gwmi win32_computersystem).partofdomain -eq $true) {
+    write-host -fore green "I am domain joined!"
+} else {
+    Write-ChocolateyFailure "machine needs to be domain joined."
+    throw "machine needs to be domain joined."
+}
+ 
+Update-ExecutionPolicy Unrestricted
+ 
+Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions 
+Enable-RemoteDesktop
+ 
+ 
+Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
+ 
+choco install PsGet
+ 
+$ModulePaths = @($env:PSModulePath -split ';')
+Write 'module paths: ' + $ModulePaths
+$ExpectedUserModulePath = Join-Path -Path ([Environment]::GetFolderPath('MyDocuments')) -ChildPath WindowsPowerShell\Modules
+$Destination = $ModulePaths | Where-Object { 
+    Test-Path -Path (Join-Path -Path $_ -ChildPath 'PsGet')
+}
+#if (-not $Destination) {
+#    $Destination = $ModulePaths | Select-Object -Index 0
+#}
+ 
+$PsGetFullPath = (Join-Path -Path $Destination -ChildPath 'PsGet')
+Write 'picking: ' $PsGetFullPath
+ 
+Import-Module $PsGetFullPath
+Install-Module -ModuleUrl https://gist.githubusercontent.com/alexanderfloh/cdd2f1cc24f1a4a823aa/raw/de08481eff702a074cc682abf54ca038b14d4e36/mount.iso.psm1
+ 
+#Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/alexanderfloh/6c53c10a495a41c13388/raw/8f76f65e7558d0e77d947af35c579ccb0210865f/boxstarter2
+ 
+ 
+# Visual Studio and Windows SDKs
+ 
+choco install DotNet3.5-from-iso
+ 
+choco install visual-studio-2008
+choco install visual-studio-2008-patches
+choco install visual-studio-2008-sp1
+ 
+choco install visual-studio-2010
+choco install VS2010SDK
+choco install visual-studio-2010-patches
+choco install visual-studio-2010-sp1
+choco install visual-studio-2010-sdk-sp1
+ 
+#choco install VisualStudio2012Professional // doesn't install MFC
+choco install visual-studio-2012
+choco install VS2012.4
+ 
+choco install Silverlight5SDK
+ 
+choco install VisualStudio2013Professional
+choco install VS2013.2
+ 
+choco install windows-7-sdk
+choco install windows-8-sdk
+ 
+# Java 
+ 
+choco install javaruntime-preventasktoolbar
+choco install jdk-1.5
+choco install jdk-1.6
+#jdk 7
+choco install java.jdk -params "x64=false"
+choco install jdk8
+ 
+choco install tortoisesvn
+ 
+Install-WindowsUpdate
