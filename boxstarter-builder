@@ -18,7 +18,8 @@ Enable-RemoteDesktop
  
 Set-BoxstarterConfig -LocalRepo \\lnz-data\exchange\AlexanderF\Boxstarter\BuildPackages
  
-choco install PsGet
+choco install PsGet -force
+Import-Module PsGet
  
 #$ModulePaths = @($env:PSModulePath -split ';')
 #Write 'module paths: ' + $ModulePaths
