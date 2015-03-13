@@ -73,7 +73,7 @@ choco install jdk-1.5
 choco install jdk-1.6
 #jdk 7
 choco install java.jdk -params "x64=false"
-choco install jdk8
+choco install jdk8 -params "both=true"
  
 choco install tortoisesvn
  
