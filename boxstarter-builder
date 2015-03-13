@@ -78,3 +78,7 @@ choco install jdk8
 choco install tortoisesvn
  
 Install-WindowsUpdate
+
+# TODO:
+# for jenkins slave:
+# HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system = DWORD 1
