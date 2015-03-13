@@ -81,3 +81,4 @@ Install-WindowsUpdate
 
 # TODO:
 # for jenkins slave: enable stuff for remote launching.
+"C:\Program Files\Microsoft SDKs\Windows\v7.1\Setup\WindowsSdkVer.exe" -version:v7.1 -q
